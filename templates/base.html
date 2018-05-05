@@ -132,6 +132,12 @@
 	    if($(window).width() < 650){
 	    	$(".omniemenu").css({"display": "none"});
 	    }
+	    $(".qa").click(function(){
+	    	$(this).find('.answer').slideToggle("slow");
+		});
+		$(".qa").click(function(){
+	    	$(this).find('.question').toggleClass("active");
+		});
 	});
 
 
