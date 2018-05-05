@@ -1,0 +1,24 @@
+{% load el_pagination_tags %}
+
+ 	{% paginate 3 object_list %}	
+	{% for obj in object_list %}
+		<div class="article">
+			<h5>{{ obj.timestamp }}</h5>
+			<div class="art-title"><a href="{{ obj.get_absolute_url }}">{{ obj.title }} </a></div>
+			<p>{{ obj.content|safe|truncatechars_html:500 }}</p>
+		</div>
+
+		<script>
+			$(".endless_container").hover(function(){
+		    	$("a.endless_more").css({"color": "#463b3b"});
+		    	$(".endless_container").css({"background-color": "white"});
+		    }, function(){
+		    	$("a.endless_more").css({"color": "white"});
+		    	$(".endless_container").css({"background-color": "#463b3b"});
+		    });
+		</script>
+	{% endfor %}
+	{% if not object_list.first %}
+		<p class="noresults">Brak wyników.</p>
+	{% endif %}
+	{% show_more "Więcej wyników" "ładowanie" %}

@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block head %} 
+
+{% endblock head %}
+
+{% block content %}	
+
+	<section class="home-hero" id="very-top">
+		<header id="headero">
+			<div class="hamburg"><i class="fas fa-bars fa-3x"></i></div>
+			<a class="logo" href="/">Jowita Michalska</a>
+			<nav>
+				<ul>
+					{% if request.user.is_authenticated %}
+					<li><a class="napisz" href="/create">Napisz artykuł</a></li>
+					{% endif %}
+					<li><a class="scroll omniemenu" href="#omnietop">O mnie</a></li>
+					<li><a class="scroll" href="#faq">FAQ</a></li>
+					<li><a class="scroll" href="#artykuly">Artykuły</a></li>
+					{% if not request.user.is_authenticated %}
+					<li><a class="scroll" href="#kontakt">Kontakt</a></li>
+					{% endif %}
+				</ul>
+			</nav>
+		</header>
+			
+		<div class="container-1">
+			<div class="foto"></div>
+			<div class="opis" id="anch">
+				<div class="warstwa"></div>
+				<h1>Jowita Michalska</h1>
+				<h3>Logopeda</h3>
+				<p class="opisik">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos tempore debitis facilis quidem dicta facere, ipsam odio dolores, necessitatibus velit, laboriosam inventore. Animi, consequatur pariatur deserunt quod eveniet delectus, neque. Nesciunt doloribus delectus soluta, repellat consectetur non aperiam perferendis illo fuga cum, nulla porro nihil blanditiis unde expedita est sapiente dolorem dolore maiores vero nostrum praesentium iure ab? Iusto, eius reiciendis consequatur aperiam dolor excepturi necessitatibus asperiores fuga inventore enim in cumque non voluptates natus dolorum ipsum optio nemo modi itaque sunt. Rerum, animi unde minima fuga temporibus eligendi aliquam laborum, neque earum quis error minus! Voluptate minus aspernatur repudiandae quod possimus eveniet illo quia aliquam sunt in dolore eum vel a molestiae ab beatae magni atque maiores rerum, voluptates deserunt sapiente iste! Nihil sapiente, a quaerat minus eius magnam, beatae maiores modi cum quibusdam obcaecati quos necessitatibus sint ab, atque delectus esse.</p>
+				<hr/>
+			</div>	
+
+		</div>
+
+	</section>
+
+<!--  -->
+
+
+<div class="wrapper">
+
+<!-- <section class="introduction" id="omnie">
+	<div class="bar omnie" id="anch">
+		<h1>O mnie</h1>
+	</div>
+
+</section> -->
+
+<section class="faq" id="faq">
+	<div class="bar pytania">
+		<h1>Pytania najczęściej zadawane przez rodziców</h1>
+	</div>
+	<div class="container-2">
+		<div class="qa">
+			<div class="question"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum omnis dolore minus, corrupti saepe. Rem?</p></div>
+			<div class="answer"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, aliquid omnis, cumque voluptate nam quos excepturi saepe laborum! Sunt recusandae ipsam porro placeat, aspernatur assumenda quas impedit quasi! Minima at, laboriosam esse, a reprehenderit itaque excepturi quae repellendus blanditiis! Non molestiae quaerat in dignissimos. Suscipit voluptatem, repellat id fuga explicn molestiae quaerat in dignissimos. Suscipit voluptatem, repellat id fuga explicabo. Non molestiae quaerat in dignissimos. Suscipit voluptatem, repellat id fuga ee quaerat in dignissimos. Suscipit voluptatem, repellat id fuga explicabo.</p></div>
+		</div>
+		<div class="qa">
+			<div class="question"><p>Lorem ipsum dolor sit amet, consectetur adipisicing unde expedita est sapiente dolorem dolore maiores vero nostrum?</p></div>
+			<div class="answer"><p>Non molestiae quaerat in dignissimos. Suscipit voluptatem, repellat id fuga explicabo. Non molestiae quaerat in dignissimos. Suscipit voluptatem, repellat id fuga explicabo. Non molestiae quaerat in dignissimos. Suscipit voluptatem, repellat id fuga explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, aliquid omnis, cumque voluptate nam quos excepturi saepe laborum! Sunt recusandae ipsam porro placeat, aspernatur assumenda quas impedit quasi! Minima at, laboriosam esse, a reprehenderit itaque excepturi quae repellendus blanditiis! Non molestiae quaerat in dignissimos. Suscipit voluptatem, repellat id fuga explicabo.</p></div>
+		</div>
+		<div class="qa">
+			<div class="question"><p>Consectetur adipisicing elit. Dolorum omnis dolore minus, corrupti saem?</p></div>
+			<div class="answer"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, aliquid omnis, cumque voluptate nam quos excepturi saepe laborum! Sunt recusandae ipsam porro placeat, aspernatur assumenda quas impedit quasi! Suscipit voluptatem, repellat id fuga explicabo. Suscipit voluptatem, repellat id fuga explicabo. Suscipit voluptatem, repellat id fuga explicabo. Minima at, laboriosam esse, a reprehenderit itaque excepturi quae repellendus blanditiis! Non molestiae quaerat in dignissimos. Suscipit voluptatem, repellat id fuga explicabo.</p></div>
+		</div>
+		<div class="qa">
+			<div class="question"><p>Nesciunt doloribus delectus soluta, repellat consectetur non aperiam perferendis adipisicing elit. Dolorum omnis dolore minus, corrupti saepe. Rem?</p></div>
+			<div class="answer"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, aliquid omnis, cumque voluptate nam quos excepturi saepe laborum! Sunt recusandae ipsam porro placeat, aspernatur assumenda quas impedit quasi! Minima at, laboriosam esse, a reprehenderit itaque excepturi quae repellendus blanditiis! Non molestiae quaerat in dignissimos. Suscipit voluptatem, repellat id fuga explicabo.</p></div>
+		</div>
+		<div class="qa">
+			<div class="question"><p>Lorem ipsum dolor sit amet adipisicing elit. Dolorum omnis dolore minus, corrupti saepe. Rem?</p></div>
+			<div class="answer"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, aliquid omnis, cumque voluptate nam quos excepturi saepe laborum! Sunt recusandae ipsam porro placeat, aspernatur assumenda quas impedit quasi! Minima at, laboriosam esse, a reprehenderit itaque excepturi quae repellendus blanditiis! Non molestiae quaerat in dignissimos. Suscipit voluptatem, repellat id fuga explicabo.</p></div>
+		</div>
+		<div class="qa">
+			<div class="question"><p>Voluptate minus aspernatur repudiandae quod possimus eveniet illo adipisicing elit. Dolorum omnis dolore minus, corrupti?</p></div>
+			<div class="answer"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, aliquid omnis, cumque voluptate nam quos excepturi saepe laborum! Sunt recusandae ipsam porro placeat, aspernatur assumenda quas impedit quasi! Minima at, laboriosam esse, a reprehenderit itaque excepturi quae repellendus blanditiis! Non molestiae quaerat in dignissimos. Suscipit voluptatem, repellat id fuga explicabo.</p></div>
+		</div>
+		<div class="qa">
+			<div class="question"><p>Eos tempore debitis facilis quidem dicta facere, ipsam odio doloresrum omnis dolore minus?</p></div>
+			<div class="answer"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, aliquid omnis, cumque voluptate nam quos excepturi saepe laborum! Sunt recusandae ipsam porro placeat, aspernatur assumenda quas impedit quasi! Minima at, laboriosam esse, a reprehenderit itaque excepturi quae repellendus blanditiis! Non molestiae quaerat in dignissimos. Suscipit voluptatem, repellat id fuga explicabo.</p></div>
+		</div>
+	</div>
+</section>
+<section class="articles" id="artykuly">
+	<div class="bar artykuly">
+		<h1>Artykuły</h1>
+	</div>
+	<div class="container-3">
+		<div class="searchbar">	
+			<form method="GET" action="#artykuly" id="ajax-search">
+				<div class="searchtext-style">
+					<input type="text" placeholder="" name="q" value="{{ request.GET.q }}" class="searchtext" id="search-landing"/>
+				</div>
+				<button class="searchbutton" id="button-ajax" type="submit"> <i class="fa fa-search fa-2x"></i></button>
+			</form>
+		</div>
+
+			<div id="ajax-container">
+{% load el_pagination_tags %}
+
+{% include page_template %}
+
+
+			</div>	
+		</div>
+	
+</section>
+
+
+
+<script>
+
+
+  
+
+
+
+$( document ).ready(function() {
+
+	 	$('#button-ajax').click(function (event){
+ 		
+ 		event.preventDefault();
+ 		loadText();
+    	function loadText(){
+    	var query = $("#search-landing").val();
+      // Create XHR Object
+      var xhr = new XMLHttpRequest();
+      // OPEN - type, url/file, async
+      xhr.open('GET', '/artykuly/?q='+query, true);
+      console.log(query);
+      console.log('READYSTATE: ', xhr.readyState);
+
+      // OPTIONAL - used for loaders
+      xhr.onprogress = function(){
+        console.log('READYSTATE: ', xhr.readyState);
+      }
+
+      xhr.onload = function(){
+        console.log('READYSTATE: ', xhr.readyState);
+        if(this.status == 200){
+          //console.log(this.responseText);
+          document.getElementById('ajax-container').innerHTML = this.responseText;
+        } else if(this.status = 404){
+          document.getElementById('ajax-container').innerHTML = 'Not Found';
+        }
+      }
+
+      xhr.onerror = function(){
+        console.log('Request Error...');
+      }
+
+      // xhr.onreadystatechange = function(){
+      //   console.log('READYSTATE: ', xhr.readyState);
+      //   if(this.readyState == 4 && this.status == 200){
+      //     //console.log(this.responseText);
+      //   }
+      // }
+
+      // Sends request
+      xhr.send();
+    }
+
+	});
+
+	$("h2").css({"text-align": "left"});
+    $(".qa").click(function(){
+    	$(this).find('.answer').slideToggle("slow");
+	});
+	$(".qa").click(function(){
+    	$(this).find('.question').toggleClass("active");
+	});
+	$(".searchbutton").hover(function(){
+    	$(".searchbutton").css({"background-color": "#463b3b"});
+    	$(".fa-search").css({"color": "white"});
+    }, function(){
+    	$(".searchbutton").css({"background-color": "#e8e2db"});
+    	$(".fa-search").css({"color": "#463b3b"});
+    });
+
+});
+
+</script>
+<script src="{% static '/el-pagination/js/el-pagination.js' %}"></script>
+<script>$.endlessPaginate();</script>
+<script>
+	$(".endless_container").hover(function(){
+    	$("a.endless_more").css({"color": "#463b3b"});
+    	$(".endless_container").css({"background-color": "white"});
+    }, function(){
+    	$("a.endless_more").css({"color": "white"});
+    	$(".endless_container").css({"background-color": "#463b3b"});
+    });
+
+</script>
+{% endblock content %}	

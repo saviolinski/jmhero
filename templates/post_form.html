@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block head %} 
+	{{ form.media }}
+{% endblock head %}
+
+{% block content %}	
+
+<section class="home-hero subsite" id="very-top">
+	<header>
+		<a class="logo" href="/">Jowita Michalska</a>
+		<nav>
+			<ul>
+				<li><a href="../#omnie">O mnie</a></li>
+				<li><a href="../#faq">FAQ</a></li>
+				<li><a href="../#artykuly">Artykuły</a></li>
+				<li><a class="scroll" href="#kontakt">Kontakt</a></li>
+			</ul>
+		</nav>
+	</header>	
+</section>
+
+<section class="article-section" id="anch">
+	<div class="bar artykul-form"></div>
+	<div class="container-form">
+		<form method="POST" action=""> {% csrf_token%}
+		{{form.as_p}}
+		<input type="submit" value="Zapisz" class="article-button">
+		</form>
+	</div>
+</section>
+{% endblock content %}
